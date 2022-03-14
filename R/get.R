@@ -7,7 +7,7 @@
 ##' @details workhorse function that will do the extracting
 ##' @import odbc DBI
 ##' @rdname bridge.odbc
-bridge.odbc <- function(data,database,species,user,password){
+bridge.odbc <- function(data,species,user,password){
     sel <- odbc_data_selection[odbc_data_selection$data==data,]
     this.query <- with(sel, sql.query(table, column, species))
 
@@ -33,7 +33,7 @@ get.bio <- function(species,user,password){
     if(missing(user)) stop ("user is missing")
     if(missing(password)) stop ("password is missing")
     
-    d <- bridge.odbc(data='bio',database='pec_pro', species=species,user=user,password=password)
+    d <- bridge.odbc(data='bio', species=species,user=user,password=password)
     
     # Copy the steps from SAP
     d$year <- year(d$date)
@@ -66,7 +66,7 @@ get.lf <- function(species,user,password){
     if(missing(user)) stop ("user is missing")
     if(missing(password)) stop ("password is missing")
     
-    d <- bridge.odbc(data='lf',database='pec_pro', species=species,user=user,password=password)
+    d <- bridge.odbc(data='lf', species=species,user=user,password=password)
     
     # Copy the steps from SAP
     d$year <- year(d$date)
