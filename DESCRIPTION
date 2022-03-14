@@ -1,0 +1,17 @@
+Package: DFOdata
+Title: Extract data from DFO databases
+Version: 0.1.0
+Date: 2022-02-10
+Authors@R: c(person("Elisabeth",
+                    "Van Beveren",
+                    role=c("aut","cre"),
+                    email="Elisabeth.vanbeveren@dfo-mpo.gc.ca"))
+Description: Extract data from DFO oracle databases into R.
+LinkingTo: odbc, DBI
+License: GPL-2
+Imports: lubridate
+Encoding: UTF-8
+LazyData: TRUE
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)

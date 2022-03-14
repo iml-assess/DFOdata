@@ -1,0 +1,9 @@
+state.id,state.id.full,conversion.cod,conversion.mackerel
+1,Round,1,1
+2,Eviscerated with head,1.2,NA
+3,Eviscerated headless,1.6,NA
+4,Without tail,NA,NA
+5,Bled,NA,NA
+6,Split,NA,NA
+9,Other,1,1
+NA,Unknown,1,1

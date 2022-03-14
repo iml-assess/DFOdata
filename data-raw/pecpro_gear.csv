@@ -1,0 +1,48 @@
+gear.full,gear,code_nr
+Aerial traps,FAR,08.6.0
+Cast nets,FCN,06.1.0
+Falling gear (not specified),FG,06.9.0
+Traps (not specified),FIX,08.9.0
+Stationary uncovered pound nets,FPN,08.1.0
+Pots,FPO,08.2.0
+Stow nets,FSN,08.4.0
+Barriers/fences/weirs/etc.,FWR,08.5.0
+Fyke nets,FYK,08.3.0
+Gillnets and entangling nets (not specified),GEN,07.9.0
+Gillnets (not specified),GN,07.9.1
+Encircling gillnets,GNC,07.3.0
+Driftnets,GND,07.2.0
+Fixed gillnets (on stakes),GNF,07.4.0
+Set gillnets (anchored),GNS,07.1.0
+Combined gillnets-trammel nets,GTN,07.6.0
+Handlines and pole-lines (mechanized),LHM,09.2.0
+Handlines and pole-lines (hand-operated),LHP,09.1.0
+Longlines (not specified),LL,09.5.0
+Drifting longlines,LLD,09.4.0
+Set longlines,LLS,09.3.0
+Lift nets (not specified),LN,05.9.0
+Boat-operated lift nets,LNB,05.2.0
+Portable lift nets,LNP,05.1.0
+Shore-operated stationary lift nets,LNS,05.3.0
+Trolling lines,LTL,09.6.0
+Hooks and lines (not specified),LX,09.9.0
+Purse seine,PS,
+Lampara,LA,
+Unspecified fixed gear,MIS,
+Unspecified fixed gear,NK,
+Bottom otter trawl,OTB,
+Midwater trawl,OTM,
+Beach and bar or tuck seine,SB,
+Danish or Scottish or Pair seine (2 boats),SDN,
+Pair seine,SPR,
+Shrimp trawl (stern) without grid,ST2,
+TS,TS,
+TXS,TXS,
+Stern otter trawl,OTB2,
+Shrimp trawl (unspecified) without grid,ST,
+Side otter trawl,OTB1,
+Scottish seine,SSC,
+Handline,LLG,
+Handline (unspecified),LMP,
+Shrimp trawl (side) without grid,ST1,
+Midwater otter trawl (stern),OTM2,

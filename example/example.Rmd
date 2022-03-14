@@ -1,0 +1,27 @@
+---
+title: "Example"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# SET-UP
+
+```{r markdown, echo=F}
+library(knitr)
+opts_chunk$set(echo = T, collapse = T, fig.align = "center", fig.width = 9, fig.height = 6)
+options(width = 140)
+```    
+
+# Example
+```{r bio mackerel, message = F}
+library(DFOdata)
+
+avail.database()
+avail.species('pec_pro')  # strings of species in dabase
+avail.data() 
+
+bio <- get.bio(species='maquereau',user="pec_iml_ro",password="***")
+lf <- get.lf(species='maquereau',user="pec_iml_ro",password="***")
+```
