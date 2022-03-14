@@ -3,7 +3,7 @@
 Package to extract data from oracle databases.
 
 *under construction*
-*only mackerel so far*
+*Should work for all species in databases. Only tested for mackerel so far*
 
 # Key functionality
 
