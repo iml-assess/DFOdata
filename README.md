@@ -1,9 +1,8 @@
 # DFOdata
 
-Package to extract data from oracle databases.
+Package to extract data from oracle databases. This is a replacament of the SAS-based software.
 
-*under construction*
-*Should work for all species in databases. Only tested for mackerel so far*
+*Should work for all species in databases (but tested for mackerel and cod only)*
 
 # Key functionality
 
@@ -13,7 +12,7 @@ From commercial sample database (pse_iml_ro)
 - read in length-frequency data 
 	function: get.lf
 
-Other functions to add when needed.
+The code is set up so that data from other DFO oracle data bases or extra columns can easily be added. See data-raw/odbc_data_selection.csv for details on what is extracted.
 
 # Installation
 
