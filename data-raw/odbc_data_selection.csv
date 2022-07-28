@@ -11,7 +11,8 @@ bio,pec_pro,echantillon_,pd_debarq,wcatch
 bio,pec_pro,echantillon_,uo_pd_debarq,wcatch.unit
 bio,pec_pro,caract_biol_,seq_ech,sample.id
 bio,pec_pro,caract_biol_,no_prel,id
-bio,pec_pro,caract_biol_,long_preserv,length
+bio,pec_pro,caract_biol_,long_frais,length.fresh
+bio,pec_pro,caract_biol_,long_preserv,length.frozen
 bio,pec_pro,caract_biol_,pd_entier,weight
 bio,pec_pro,caract_biol_,ind_sexe,sex
 bio,pec_pro,caract_biol_,cod_stad_mat,matur
