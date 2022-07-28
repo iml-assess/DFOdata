@@ -48,7 +48,7 @@ get.bio <- function(species,user,password){
     d$prov <- repl(d$prov,pecpro_prov$prov,pecpro_prov$prov.full)
     
     # reorder    
-    d <- d[order(d$date,d$sample.id,d$length),]
+    d <- d[order(d$date,d$sample.id,d$length.fresh,d$length.frozen),]
     return(d)
 }
 
