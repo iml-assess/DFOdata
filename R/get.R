@@ -43,6 +43,7 @@ get.bio <- function(species,user,password){
     
     # add additional columns
     d <- merge(d, pecpro_gear[,1:2], all.x = TRUE, by = 'gear') # gear_full
+    d$source.full <- repl(d$source,pecpro_source$source,pecpro_source$source.full)
     
     # replace identification numbers by something meaningful
     d$prov <- repl(d$prov,pecpro_prov$prov,pecpro_prov$prov.full)
@@ -82,7 +83,7 @@ get.lf <- function(species,user,password){
     d$length.bin <- repl(d$length.bin,pecpro_length.bin$length.bin,pecpro_length.bin$length.bin.full)
     d$length.type <- repl(d$length.type,pecpro_length.type$length.type,pecpro_length.type$length.type.full)
     d$sample.cat <- repl(d$sample.cat,pecpro_sample.cat$sample.cat,pecpro_sample.cat$sample.cat.full)
-    d$source <- repl(d$source,pecpro_source$source,pecpro_source$source.full)
+    d$source.full <- repl(d$source,pecpro_source$source,pecpro_source$source.full)
     d$state.id <- repl(d$state.id,pecpro_state.id$state.id,pecpro_state.id$state.id.full)
     
     # reorder    

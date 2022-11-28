@@ -4,18 +4,18 @@
 \alias{bridge.odbc}
 \title{function to extract data fom odbc databases}
 \usage{
-bridge.odbc(data, database, species, user, password)
+bridge.odbc(data, species, user, password)
 }
 \arguments{
 \item{data}{data to extract (see avail.data function)}
-
-\item{database}{name of the database (see avail.database function)}
 
 \item{species}{name of the species (see avail.species function)}
 
 \item{user}{user name to connect to database}
 
 \item{password}{password to connect to database}
+
+\item{database}{name of the database (see avail.database function)}
 }
 \description{
 function to extract data fom odbc databases
