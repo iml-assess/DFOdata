@@ -107,7 +107,7 @@ get.lf <- function(species,user,password){
 ##' @param password password to connect to database
 ##' @param driver character string (default: Oracle in OraClient12Home1)
 ##' @details The default driver is 'Oracle in OraClient12Home1'. Use argument driver=xxxx to connect with another driver.
-##' @import lubridate
+##' @import odbc DBI
 ##' @rdname get.eggs
 ##' @export
 get.eggs <- function(user,password,driver="Oracle in OraClient12Home1"){
