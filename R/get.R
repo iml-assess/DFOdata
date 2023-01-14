@@ -107,7 +107,7 @@ get.lf <- function(species,user,password){
 ##' @param password password to connect to database
 ##' @param driver character string (default: Oracle in OraClient12Home1)
 ##' @details The default driver is 'Oracle in OraClient12Home1'. Use argument driver=xxxx to connect with another driver.
-##' @import odbc DBI
+##' @import odbc DBI stringr lubridate
 ##' @rdname get.eggs
 ##' @export
 get.eggs <- function(user,password,driver="Oracle in OraClient12Home1"){
@@ -135,7 +135,25 @@ get.eggs <- function(user,password,driver="Oracle in OraClient12Home1"){
         ## remove table again and disconnect
         status <- dbRemoveTable(con, name="TMP", purge=TRUE, schema=NULL)
         DBI::dbDisconnect(con)
-        
+      
+    # reformat
+    d1$consecutive <- sub("consec","",d1$consecutive,TRUE)
+    
+    d1$start_time <- str_pad(d1$start_time, width=4, side="left", pad="0")
+    d1$start_time <- ifelse(is.na(d1$start_time),NA,paste(substr(d1$start_time,1,2),substr(d1$start_time,3,4),sep=":"))
+    
+    d1$end_time <- str_pad(d1$end_time, width=4, side="left", pad="0")
+    d1$end_time <- ifelse(is.na(d1$end_time),NA,paste(substr(d1$end_time,1,2),substr(d1$end_time,3,4),sep=":"))
+    
+    d1$date_start <- ifelse(is.na(d1$start_time),NA,paste0(d1$year,"-",d1$month,"-",d1$day," ",d1$start_time))
+    d1$date_start <- as.POSIXct(d1$date_start ,tz='UTC', format = "%Y-%m-%d %H:%M")
+    d1$date_end <- ifelse(is.na(d1$end_time),NA,paste0(d1$year,"-",d1$month,"-",d1$day," ",d1$end_time))
+    d1$date_end <- as.POSIXct(d1$date_end ,tz='UTC', format = "%Y-%m-%d %H:%M")
+    
+    d1$set_duration <- with(d1, difftime(date_end,date_start,units = 'min'))
+    d1[d1$set_duration<(-1000) &!is.na(d1$set_duration),'date_end'] <-  d1[d1$set_duration<(-1000) &!is.na(d1$set_duration),'date_end']+days(1)
+    d1$set_duration <- with(d1, difftime(date_end,date_start,units = 'secs'))
+    
     # put together
     attr(d1,'query') <- biochemp_stations
     attr(d2,'query') <- biochemp_counts
