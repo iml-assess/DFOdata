@@ -1,6 +1,6 @@
 Package: DFOdata
 Title: Extract data from DFO databases
-Version: 0.1.0
+Version: 0.1.1
 Date: 2022-02-10
 Authors@R: c(person("Elisabeth",
                     "Van Beveren",

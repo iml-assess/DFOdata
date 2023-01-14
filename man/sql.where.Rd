@@ -4,10 +4,12 @@
 \alias{sql.where}
 \title{create string for where}
 \usage{
-sql.where(table, column)
+sql.where(table, column, arguments)
 }
 \arguments{
 \item{column}{column names}
+
+\item{arguments}{subset for columns}
 
 \item{table_short}{short table names}
 }

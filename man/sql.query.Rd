@@ -4,7 +4,7 @@
 \alias{sql.query}
 \title{create sql query}
 \usage{
-sql.query(table, column, species)
+sql.query(table, column, species, arguments)
 }
 \arguments{
 \item{table}{full table names (without species)}

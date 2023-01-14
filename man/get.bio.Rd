@@ -17,5 +17,5 @@ get.bio(species, user, password)
 function to get (car)bio data fom odbc databases
 }
 \details{
-There are small differences with the SAP extractions (e.g., if sample.id=NA rows are not kept, trivial differences in rounding for length/weight)
+There are small differences with the SAP extractions (e.g., if sample.id=NA rows are not kept, trivial differences in rounding for length/weight).
 }

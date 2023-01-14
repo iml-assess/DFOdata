@@ -10,7 +10,15 @@ rawcsv <- lapply(raw, read.csv)
 names(rawcsv) <- rawn
 list2env(rawcsv,envir=.GlobalEnv)
 
-# save for use in package
+# load sql queries
+rawsql  <- list.files('data-raw' , pattern = 'sql', full.names = T)
+rawsqln <- sub('\\.sql$', '',list.files('data-raw' , pattern = 'sql'))
+
+rawsql <- lapply(rawsql, function(x) paste(scan(file=x, what=ls(), sep="\n"), collapse=" "))
+names(rawsql) <- rawsqln
+list2env(rawsql,envir=.GlobalEnv)
+
+# save for use in package (could do this dynamically...)
 usethis::use_data(odbc_data_selection,
                   odbc_tables,
                   pecpro_gear,
@@ -20,6 +28,8 @@ usethis::use_data(odbc_data_selection,
                   pecpro_sample.cat,
                   pecpro_source,
                   pecpro_state.id,
+                  biochemp_counts,
+                  biochemp_stations,
                   internal = TRUE, overwrite = TRUE)
 
 
