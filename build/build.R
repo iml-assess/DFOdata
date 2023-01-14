@@ -23,7 +23,6 @@
 # devtools::load_all() 
 
 # preview help
-# rstudioapi::previewRd('man/fit.armatrix.Rd')
-# rstudioapi::previewRd('man/find.species.Rd')
-
-# for use of cpps (TMB) see https://rtbecard.gitlab.io/2018/02/11/Distributing-TMB-in-R-packages.html
+# rstudioapi::previewRd('man/get.lf.Rd')
+# rstudioapi::previewRd('man/get.bio.Rd')
+# rstudioapi::previewRd('man/get.eggs.Rd')

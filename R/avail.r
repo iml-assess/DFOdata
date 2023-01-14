@@ -1,4 +1,4 @@
-##' species names in databases
+##' species names in pecpro database
 ##' @param database databse in which to look (e.g., pec_pro)
 ##' @details lists species names in pec_pro. Not all species have all tables available (bio vs commercial samples)
 ##' @rdname avail.species

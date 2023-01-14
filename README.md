@@ -1,18 +1,24 @@
 # DFOdata
 
-Package to extract data from oracle databases. This is a replacament of the SAS-based software.
-
-*Should work for all species in databases (but tested for mackerel and cod only)*
+Package to extract data from DFO oracle databases.
 
 # Key functionality
+See example.Rmd
 
-From commercial sample database (pse_iml_ro)
-- read in biological data ("carbio")
-	function: get.bio
-- read in length-frequency data 
-	function: get.lf
+From commercial sample database (IMLP)
+* read in biological data ("carbio") function: get.bio
+    + mackerel
+    + cod
+    + needs validation for other species. 
+        - See data-raw/odbc_data_selection.csv for details on what is extracted
+* read in length-frequency data function: get.lf
+    + mackerel
+    + cod
+    + needs validation for other species
+        - See data-raw/odbc_data_selection.csv for details on what is extracted
 
-The code is set up so that data from other DFO oracle data bases or extra columns can easily be added. See data-raw/odbc_data_selection.csv for details on what is extracted.
+From ichtyoplankton sample database (BIOCHEMP)
+* read in bongo sample data (mackerel egg stations and counts): get.eggs
 
 # Installation
 
@@ -24,11 +30,11 @@ devtools::install_github("iml-assess/DFOdata")
 2. windows search "open ODBC DATA Source (64 bit)" and open as administrator
 3. click on tab "system DSN", anc click add. Select ODBC.
 4. create bridge with the following information:
-	DATA SOURCE NAME: IMLP
-	DESCRIPTION: IMLP
-	TNS SERVICE NAME: IMLP
-	USER ID: *** 
-5. click "test connection" or ok and provide password ***
+    + DATA SOURCE NAME: IMLP / BIOCHEMP
+    + DESCRIPTION: IMLP / BIOCHEMP
+    + TNS SERVICE NAME: IMLP / BIOCHEMP
+    + USER ID: *** 
+5. click "test connection" or ok and provide password
 
 # instructions to view Oracle databases with DBeaver
 

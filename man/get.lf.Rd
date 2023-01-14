@@ -17,5 +17,5 @@ get.lf(species, user, password)
 function to get length-frequency data fom odbc databases
 }
 \details{
-no details
+No details
 }

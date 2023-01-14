@@ -16,12 +16,17 @@ options(width = 140)
 
 # Example
 ```{r bio mackerel, message = F}
+setwd('..');source('passwords.R') # get passwords and user names
+
 library(DFOdata)
 
 avail.database()
-avail.species('pec_pro')  # strings of species in dabase
+avail.species('pec_pro')  # strings of species in database
 avail.data() 
 
-bio <- get.bio(species='maquereau',user="pec_iml_ro",password="***")
-lf <- get.lf(species='maquereau',user="pec_iml_ro",password="***")
+bio <- get.bio(species='maquereau',user=imlp.user,password=imlp.pass)
+lf <- get.lf(species='maquereau',user=imlp.user,password=imlp.pass)
+eggs <- get.eggs(user=biochemp.user,password=biochemp.pass)
+
+
 ```
