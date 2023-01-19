@@ -116,7 +116,7 @@ get.eggs <- function(user,password,driver="Oracle in OraClient12Home1"){
     
     # extract two data tables
         ## connect with database
-        connect.string <- paste0("Driver={",driver,"};Dbq=",database,";Uid=",user,";Pwd=",password,";")
+        connect.string <- paste0("Driver={",driver,"};Dbq=BIOCHEMP;Uid=",user,";Pwd=",password,";")
         con <- odbc::dbConnect(odbc::odbc(),.connection_string = connect.string)
         
         ## get station data
