@@ -14,7 +14,8 @@ opts_chunk$set(echo = T, collapse = T, fig.align = "center", fig.width = 9, fig.
 options(width = 140)
 ```    
 
-# Example
+# Example 1: Mackerel
+
 ```{r bio mackerel, message = F}
 setwd('..');source('passwords.R') # get passwords and user names
 
@@ -28,5 +29,18 @@ bio <- get.bio(species='maquereau',user=imlp.user,password=imlp.pass)
 lf <- get.lf(species='maquereau',user=imlp.user,password=imlp.pass)
 eggs <- get.eggs(user=biochemp.user,password=biochemp.pass)
 
+```
+
+# Example 2: Capelin
+
+```{r bio mackerel, message = F}
+setwd('..');source('passwords.R') # get passwords and user names
+
+library(DFOdata)
+
+bio <- get.bio(species='capelan',user=imlp.user,password=imlp.pass)
+lf <- get.lf(species='capelan',user=imlp.user,password=imlp.pass)
 
 ```
+
+

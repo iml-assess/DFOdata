@@ -1,6 +1,6 @@
 Package: DFOdata
 Title: Extract data from DFO databases
-Version: 0.1.1
+Version: 0.1.2
 Date: 2022-02-10
 Authors@R: c(person("Elisabeth",
                     "Van Beveren",
@@ -12,6 +12,6 @@ License: GPL-2
 Imports: lubridate
 Encoding: UTF-8
 LazyData: TRUE
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)

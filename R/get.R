@@ -52,6 +52,7 @@ get.bio <- function(species,user,password){
     
     # replace identification numbers by something meaningful
     d$prov <- repl(d$prov,pecpro_prov$prov,pecpro_prov$prov.full)
+    d$length.type <- repl(d$length.type,pecpro_length.type$length.type,pecpro_length.type$length.type.full)
     
     # reorder    
     d <- d[order(d$date,d$sample.id,d$length.fresh,d$length.frozen),]

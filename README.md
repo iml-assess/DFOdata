@@ -36,13 +36,12 @@ devtools::install_github("iml-assess/DFOdata")
     + USER ID: *** 
 5. click "test connection" or ok and provide password
 
-# instructions to view Oracle databases with DBeaver
+# instructions to view Oracle databases with SQL developer
 
-1. install Dbeaver
-2. connect to database -> odbc
-3. fill in fields.
+1. install SQL developer (available in software center)
+2. select database (IMLPP / BIOCHEMP) in list
+3. fill use/password
 
-On the left side all tables in the database are indicated. Click on the main table (between ORDSYS and SDE) and then "Tables". All tables can be explored through e.g. right-click "View Table" or "Export Table".
 
 # Notes
 
@@ -50,6 +49,9 @@ On the left side all tables in the database are indicated. Click on the main tab
 There are minor differences with data extracted with SAS/Majpec:
 - empty lines (sample id = NA) are not included
 - trivial differences in some lengths and weights due to rounding
+
+# Version history
+As of V1.2, get.bio results in 3 extra columns (length.type, station and remarks). Station numbers can be used to link with survey data (e.g., bottom trawl surveys).
 
 
 
