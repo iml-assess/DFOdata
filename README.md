@@ -22,26 +22,27 @@ From ichtyoplankton sample database (BIOCHEMP)
 
 # Installation
 
-devtools::install_github("iml-assess/DFOdata")
+1. Install "devtools" through an executable (download online) or the software manager
+2. Install rools package directly in R
+3. Make a bridge with ODBC;
 
-# Instructions to make a bridge with ODBC
-
-1. install Oracle 12 Client (x64)
-2. windows search "open ODBC DATA Source (64 bit)" and open as administrator
-3. click on tab "system DSN", anc click add. Select ODBC.
-4. create bridge with the following information:
+3.1. install Oracle 12 Client (x64)
+3.2. windows search "open ODBC DATA Source (64 bit)" and open as administrator/privelige manager
+3.3. click on tab "system DSN", anc click add. Select ODBC.
+3.4. create bridge with the following information (IMLP for get.bio and get.lf, BIOCHEMP for get.eggs):
     + DATA SOURCE NAME: IMLP / BIOCHEMP
-    + DESCRIPTION: IMLP / BIOCHEMP
-    + TNS SERVICE NAME: IMLP / BIOCHEMP
+    + TNS SERVICE NAME: OKENP27 / BIOCHEMP
     + USER ID: *** 
-5. click "test connection" or ok and provide password
+3.5. click "test connection" or ok and provide password
+
+4. Install DFOdata package in r, by copying the following code;
+devtools::install_github("iml-assess/DFOdata")
 
 # instructions to view Oracle databases with SQL developer
 
-1. install SQL developer (available in software center)
-2. select database (IMLPP / BIOCHEMP) in list
+1. install SQL developer or alternative (available in software center)
+2. select database (IMLP / BIOCHEMP) in list
 3. fill use/password
-
 
 # Notes
 
