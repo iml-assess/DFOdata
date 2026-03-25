@@ -38,7 +38,7 @@ get.bio <- function(species,user,password){
     # extract data
     d <- bridge.odbc(this.query,database='IMLP',user=user,password=password)
     names(d) <- sel$R                  # new columns names
-    d <- d[!duplicated(as.list(d))]    # remove duplicate columns (ids that connect tables)
+    d <- d[, !duplicated(names(d))]    # remove duplicate columns based on colnames (ids that connect tables)
     
     # Copy the steps from SAP
     d$year <- year(d$date)
