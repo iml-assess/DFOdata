@@ -26,14 +26,14 @@ From ichtyoplankton sample database (BIOCHEMP)
 2. Install rools package directly in R
 3. Make a bridge with ODBC;
 
-	3.1. install Oracle 12 Client (x64)
-	3.2. windows search "open ODBC DATA Source (64 bit)" and open as administrator/privelige manager
-	3.3. click on tab "system DSN", anc click add. Select ODBC.
-	3.4. create bridge with the following information (IMLP for get.bio and get.lf, BIOCHEMP for get.eggs):
-        + DATA SOURCE NAME: IMLP / BIOCHEMP
-        + TNS SERVICE NAME: OKENP27 / BIOCHEMP
-        + USER ID: *** 
-	3.5. click "test connection" or ok and provide password
+	* install Oracle 12 Client (x64)
+	* windows search "open ODBC DATA Source (64 bit)" and open as administrator/privelige manager
+	* click on tab "system DSN", anc click add. Select ODBC.
+	* create bridge with the following information (IMLP for get.bio and get.lf, BIOCHEMP for get.eggs):
+		+ DATA SOURCE NAME: IMLP / BIOCHEMP
+		+ TNS SERVICE NAME: OKENP27 / BIOCHEMP
+		+ USER ID: *** 
+	* click "test connection" or ok and provide password
 
 4. Install DFOdata package in r, by copying the following code;
 devtools::install_github("iml-assess/DFOdata")
